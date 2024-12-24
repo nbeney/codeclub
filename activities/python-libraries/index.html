@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python libraries</title>
+    <script src="/custom-elements/custom-navbar.js"></script>
+    <script src="/custom-elements/custom-library.js"></script>
+    <script type="module" src="/custom-elements/custom-code-block.js"></script>
+    <script src="/custom-elements/custom-copyright.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+
+<body class="container">
+    <cc-navbar active="python-libraries" level="2" />
+
+    <h1>Python libraries</h1>
+
+    <p>A Python library, also known as module or package, is a collection of constants, functions and classes that can be reused when writing new programs.</p>
+
+    <p>There are three types of libraries:</p>
+    <ul>
+        <li><strong>standard libraries</strong>: they come with Python (eg <code>math</code>, <code>random</code>, <code>turtle</code>, <code>winsound</code>)</li>
+        <li><strong>third-party libraries</strong>: they have been written by someone else (eg <code>adventurelib</code>, <code>guizero</code>, <code>pgzero</code>)</li>
+        <li><strong>own libraries</strong>: as your programs grow larger you will often create your own libraries</li>
+    </ul>
+
+    <h2>Libraries used at Code Club</h2>
+
+    <p>Here are all the libraries that we use at Code Club:</p>
+
+    <div class="accordion" id="list-of-libraries">
+        <cc-library name="adventurelib" description="to create text-based adventure games">
+            <p><strong>Documentation</strong>: <a href="https://adventurelib.readthedocs.io/">https://adventurelib.readthedocs.io/</a></p>
+            <p><strong>Code samples</strong>: See <a href="../adventurelib-based/index.html">Build an adventure game with Adventurelib</a> for details.</p>
+            <p><strong>Installation</strong>: <code>pip install adventurelib</code></p>
+        </cc-library>
+
+        <cc-library name="guizero" description="to build GUIs">
+            <p><strong>Documentation</strong>: <a href="/offline/lawsie.github.io/guizero/start/index.html">https://lawsie.github.io/guizero/start/</a></p>
+            <p><strong>Code samples</strong>: See <a href="../guizero-based/index.html">Build an app with Guizero</a> for details.</p>
+            <p><strong>Installation</strong>: <code>pip install guizero[images]</code></p>
+        </cc-library>
+
+        <cc-library name="inflect" description="to convert numbers to words">
+            <p><strong>Documentation</strong>: <a href="https://inflect.readthedocs.io/">https://inflect.readthedocs.io/</a></p>
+            <p><strong>Code samples</strong>:</p>
+            <cc-code-block>
+import inflect
+
+engine = inflect.engine()
+number = 123
+words = engine.number_to_words(number)
+print(number, 'is', words)
+
+# Output:
+#     123 is one hundred and twenty-three
+            </cc-code-block>
+            <p><strong>Installation</strong>: <code>pip install inflect</code></p>
+        </cc-library>
+
+        <cc-library name="p5" description="to build animations or digital art">
+            <p><strong>Documentation</strong>: <a href="p5-index.html">p5-index.html</a></p>
+            <p><strong>Code samples</strong>: See <a href="../p5-based/index.html">Create an animation or digital art with P5</a> for details.</p>
+            <p><strong>Installation</strong>: No setup required! Use the online <a href="https://editor.raspberrypi.org/en/">code editor</a> from the <a href="https://www.raspberrypi.org/">Raspberry Pi Foundation.</a></p>
+        </cc-library>
+
+        <cc-library name="pgzero" description="to build video games">
+            <p><strong>Documentation</strong>: <a href="https://pygame-zero.readthedocs.io/">https://pygame-zero.readthedocs.io/</a></p>
+            <p><strong>Code samples</strong>: See <a href="../pygame-zero-based/index.html">Build a video game with Pygame Zero</a> for details.</p>
+            <p><strong>Installation</strong>: <code>pip install pgzero</code></p>
+        </cc-library>
+
+        <cc-library name="pyfiglet" description="to create ASCII art from text">
+            <p><strong>Documentation</strong>: <a href="https://pypi.org/project/pyfiglet/">https://pypi.org/project/pyfiglet/</a> or <a href="https://www.tutorialspoint.com/ascii-art-using-python-pyfiglet-module">https://www.tutorialspoint.com/ascii-art-using-python-pyfiglet-module</a></p>
+            <p><strong>Code samples</strong>:</p>
+            <p>List all the possible font names:</p>
+            <cc-code-block>
+import pyfiglet
+
+font_names = sorted(pyfiglet.FigletFont.getFonts())
+print(len(font_names))
+print(font_names)
+
+# Output:
+#     549
+#     ['1943____', '1row', '3-d', '3d-ascii', '3d_diagonal', '3x5', '4max', '4x4_offr', '5lineoblique', ...
+            </cc-code-block>
+            <p>Convert a string to ASCII Art:</p>
+            <cc-code-block>
+import pyfiglet
+
+text = "Code Club!"
+font = "speed"
+ascii_art = pyfiglet.figlet_format(text, font)
+print(ascii_art)
+
+# Output:
+#     _________     _________          ______________      ______ ______
+#     __  ____/___________  /____      __  ____/__  /___  ____  /____  /
+#     _  /    _  __ \  __  /_  _ \     _  /    __  /_  / / /_  __ \_  / 
+#     / /___  / /_/ / /_/ / /  __/     / /___  _  / / /_/ /_  /_/ //_/  
+#     \____/  \____/\__,_/  \___/      \____/  /_/  \__,_/ /_.___/(_)   
+            </cc-code-block>
+            <p><strong>Installation</strong>: <code>pip install pyfiglet</code></p>
+        </cc-library>
+
+        <cc-library name="pytest" description="to write automated tests">
+            <p><strong>Documentation</strong>: <a href="https://docs.pytest.org/">https://docs.pytest.org/</a></p>
+            <p><strong>Code samples</strong>:</p>
+            <cc-code-block>
+# Under construction...
+            </cc-code-block>
+            <p><strong>Installation</strong>: <code>pip install pytest</code></p>
+        </cc-library>
+
+        <cc-library name="pyttsx3" description="to read text aloud">
+            <p><strong>Documentation</strong>: <a href="https://pyttsx3.readthedocs.io/">https://pyttsx3.readthedocs.io/</a></p>
+            <p><strong>Code samples</strong>:</p>
+            <cc-code-block>
+import pyttsx3
+
+text = "Hello you! What's up?"
+pyttsx3.speak(text)
+            </cc-code-block>
+            <p><strong>Installation</strong>: <code>pip install pyttsx3</code></p>
+        </cc-library>
+
+        <cc-library name="random*" description="to add some randomness to your programs">
+            <p><strong>Documentation</strong>: <a href="https://docs.python.org/3/library/random.html">https://docs.python.org/3/library/random.html</a></p>
+            <p><strong>Code samples</strong>:</p>
+            <p>Generate 5 random integers (ints) between 1 and 10:</p>
+            <cc-code-block>
+import random
+
+for i in range(5):
+    print(random.randint(5, 10))
+
+# Possible output:
+#     7
+#     10
+#     9
+#     7
+#     8
+            </cc-code-block>
+            <p>Generate 5 random floating point numbers (floats) between 0.0 and 1.0:</p>
+            <cc-code-block>
+import random
+
+for i in range(5):
+    print(random.random())
+
+# Possible output:
+#     0.44989440807025205
+#     0.7719221475578524
+#     0.8117074999965667
+#     0.3216176959290542
+#     0.8296494377175666
+            </cc-code-block>
+            <p>Choose 5 random items from a list (with repetitions):</p>
+            <cc-code-block>
+import random
+
+fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape"]
+for i in range(5):
+    print(random.choice(fruits))
+
+# Possible output:
+#     date
+#     elderberry
+#     apple
+#     elderberry
+#     grape
+            </cc-code-block>
+            <p>Shuffle a list (in place):</p>
+            <cc-code-block>
+import random
+
+vegetables = ["artichoke", "beet", "carrot", "daikon", "eggplant", "fennel"]
+print("Before:", vegetables)
+random.shuffle(vegetables)
+print("After: ", vegetables)
+
+# Possible output:
+#     Before: ['artichoke', 'beet', 'carrot', 'daikon', 'eggplant', 'fennel']
+#     After:  ['eggplant', 'carrot', 'artichoke', 'beet', 'daikon', 'fennel']
+            </cc-code-block>
+            <p><strong>Installation</strong>: This is a standard library so it comes with Python already.</p>
+        </cc-library>
+
+        <cc-library name="winsound*" description="to play sounds and music notes">
+            <p><strong>Documentation</strong>: <a href="https://docs.python.org/3/library/winsound.html">https://docs.python.org/3/library/winsound.html</a></p>
+            <p><strong>Code samples</strong>:</p>
+            <cc-code-block>
+import winsound
+
+frequency = 440  # 440 Hertz
+duration_ms = 500  # 500 milliseconds = 0.5 second
+winsound.Beep(frequency, duration_ms)
+            </cc-code-block>
+        </cc-library>
+    </div>
+
+    <h2>How to use a library?</h2>
+
+    <p>To use a library in your program, you must <code>import</code> it. There are different ways to do this. Let say you want to use the <code>App</code> class from the <code>guizero</code> library. You can choose one of:</p>
+
+    <div class="accordion" id="how-to-use">
+        <cc-library name="Method #1 - Import the whole library" description="&lt;code&gt;import guizero&lt;/code&gt;">
+            Import the whole library and use the <code>App</code> class with the <code>guizero.App</code> syntax:
+            <cc-code-block>
+import guizero
+
+...
+app = guizero.App(title="My app")
+...
+            </cc-code-block>
+            <p><strong>Installation</strong>: This is a standard library so it comes with Python already.</p>            
+        </cc-library>
+
+        <cc-library name="Method #2 - Import the whole library with an alias" description="&lt;code&gt;import guizero as gz&lt;/code&gt;">
+            Import the whole library with an alias, let say <code>gz</code>, and use the <code>App</code> class with the <code>gz.App</code> syntax:
+            <cc-code-block>
+import guizero as gz
+
+...
+app = gz.App(title="My app")
+...
+            </cc-code-block>
+        </cc-library>
+
+        <cc-library name="Method #3 - Import just what you need from the library" description="&lt;code&gt;from guizero import App&lt;/code&gt;">
+            Import just what you need from the library and use the <code>App</code> class directly:
+            <cc-code-block>
+from guizero import App
+
+...
+app = App(title="My app")
+...
+            </cc-code-block>
+        </cc-library>
+
+        <cc-library name="Method #4 - Import everything from the library" description="&lt;code&gt;from guizero import *&lt;/code&gt;">
+            Import everything from the library and use the <code>App</code> class directly:
+            <cc-code-block>
+from guizero import *
+
+...
+app = App(title="My app")
+...
+            </cc-code-block>
+        </cc-library>
+    </div>
+
+    <h2>Common errors</h2>
+
+    <p>Here are some common errors that you may encounter when using libraries:</p>
+
+    <div class="accordion" id="common-errors">
+        <cc-library name="ModuleNotFoundError" description="No module named 'xyz'">
+            <p><strong>Error message</strong>: <code>ModuleNotFoundError: No module named 'xyz'</code></p>
+            <p><strong>Reason #1</strong>: The library <code>xyz</code> is not installed on your computer.</p>
+            <p><strong>Solution #1</strong>: Install the library <code>xyz</code> on your computer. This can usually be done with <code>pip install xyz</code>. Your IDE may also provide an easier way to do this.</p>
+            <p><strong>Reason #2</strong>: The library <code>xyz</code> is not in <code>PYTHONPATH</code> (the list of folders where Python searches for libraries).</p>
+            <p><strong>Solution #2</strong>: If you are in a school, you may have to add two lines like this at the beginning of your program:</p>
+            <cc-code-block>
+import sys
+sys.path.append(r"\\dwstr04\Student Shared\CodingClub\python-packages")
+            </cc-code-block>
+            <p><strong>Reason #3</strong>: You have mispelled the name of the library in the <code>import</code> statement.</p>
+            <p><strong>Solution #3</strong>: Check the name of the library and use the correct spelling. Remember that Python is a case-sensitive language (ie upper case letters are different from lower case letters).</p>
+        </cc-library>
+
+        <cc-library name="NameError" description="name 'xyz' is not defined">
+            <p><strong>Error message</strong>: <code>NameError: name 'xyz' is not defined</code></p>
+            <p><strong>Reason</strong>: You have mispelled the name a constant/function/class from the library.</p>
+            <p><strong>Solution</strong>: Check the name of the constant/function/class and use the correct spelling. Remember that Python is a case-sensitive language (ie upper case letters are different from lower case letters).</p>
+        </cc-library>
+    </div>
+
+    <cc-copyright></cc-copyright>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
